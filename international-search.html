@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UniPass - Search</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Pulsating Effect for Button */
+    @keyframes pulsate {
+      0% {
+        transform: scale(1);
+        background-color: #007bff;
+      }
+      50% {
+        transform: scale(1.1);
+        background-color: #0056b3;
+      }
+      100% {
+        transform: scale(1);
+        background-color: #007bff;
+      }
+    }
+
+    .btn-bleep {
+      animation: pulsate 1.5s infinite;
+      transition: all 0.3s ease;
+    }
+
+    .btn-bleep:hover {
+      animation: none;
+      transform: scale(1.05);
+      background-color: #0056b3;
+    }
+
+    /* Fix navbar overlap with content */
+    .container {
+      padding-top: 80px; /* Added padding-top to avoid overlap with navbar */
+      padding-bottom: 100px; /* Adds space between form and footer */
+    }
+
+    footer {
+      margin-top: 50px; /* Ensures footer isn't directly attached to content */
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">
+      <img src="logo.png" alt="UniPass Logo" height="40">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="mainNavbar">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="universities.html">Universities</a></li>
+        <li class="nav-item"><a class="nav-link active" href="search.html">Search</a></li>
+        <li class="nav-item"><a class="nav-link" href="connect.html">Connect</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+      </ul>
+      <div class="nav-auth-buttons">
+        <a href="login.html" class="btn btn-outline-primary me-2">Login</a>
+        <a href="signup.html" class="btn btn-primary">Sign Up</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Form Header -->
+<div class="container mt-5 pt-5">
+  <h2 class="text-center mb-4">International University Search</h2>
+  <form action="#" method="POST">
+    <div class="row">
+      <!-- Preferred Country -->
+      <div class="col-md-6 mb-3">
+        <label for="country" class="form-label">Preferred Country</label>
+        <input type="text" id="country" class="form-control" placeholder="Enter your preferred country" required>
+      </div>
+      
+      <!-- Program Type -->
+      <div class="col-md-6 mb-3">
+        <label for="programType" class="form-label">Program Type</label>
+        <select id="programType" class="form-select" required>
+          <option value="bachelor">Bachelors</option>
+          <option value="master">Masters</option>
+        </select>
+      </div>
+
+      <!-- Desired Course -->
+      <div class="col-md-6 mb-3">
+        <label for="course" class="form-label">Desired Course</label>
+        <input type="text" id="course" class="form-control" placeholder="Enter the desired course" required>
+      </div>
+
+      <!-- GPA/CGPA -->
+      <div class="col-md-6 mb-3">
+        <label for="gpa" class="form-label">Enter GPA/CGPA</label>
+        <input type="number" id="gpa" class="form-control" placeholder="Enter your GPA or CGPA" step="0.01" required>
+      </div>
+
+      <!-- Language Proficiency Scores -->
+      <div class="col-md-6 mb-3">
+        <label for="scores" class="form-label">Language Proficiency Scores (IELTS/TOEFL/GRE)</label>
+        <input type="text" id="scores" class="form-control" placeholder="Enter your language proficiency scores" required>
+      </div>
+
+      <!-- Budget -->
+      <div class="col-md-6 mb-3">
+        <label for="budget" class="form-label">Budget Preferences</label>
+        <input type="number" id="budget" class="form-control" placeholder="Enter your budget" required>
+      </div>
+
+      <!-- Currency -->
+      <div class="col-md-6 mb-3">
+        <label for="currency" class="form-label">Currency</label>
+        <select id="currency" class="form-select" required>
+          <option value="usd">USD</option>
+          <option value="euro">EUR</option>
+        </select>
+      </div>
+
+      <!-- Scholarship Eligibility -->
+      <div class="col-md-6 mb-3">
+        <label for="scholarship" class="form-label">Scholarship Eligibility</label>
+        <select id="scholarship" class="form-select" required>
+          <option value="yes">Yes</option>
+          <option value="no">No</option>
+        </select>
+      </div>
+
+      <!-- Submit Button -->
+      <div class="col-md-12 text-center">
+        <button type="submit" class="btn btn-primary btn-lg mt-3 btn-bleep">Start Search</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+<!-- Footer -->
+<footer class="bg-dark text-white py-4">
+  <div class="container text-center">
+    <p>© 2024 UniPass. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
