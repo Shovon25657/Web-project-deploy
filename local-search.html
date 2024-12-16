@@ -41,8 +41,37 @@
     }
 
     footer {
-      margin-top: 50px; /* Adds space between form and footer */
-    }
+    padding-top: 40px; /* Adjust padding-top to prevent excessive height */
+    padding-bottom: 40px; /* Adjust padding-bottom to control footer height */
+    background-color: #343a40; /* Ensure the background color is consistent */
+  }
+
+  footer .container {
+    max-width: 1200px; /* Limit the width of the content inside footer */
+    margin: 0 auto;
+  }
+
+  footer h5 {
+    font-size: 1.1rem;
+    font-weight: bold;
+  }
+
+  footer p, footer a {
+    font-size: 0.9rem;
+  }
+
+  footer .list-unstyled {
+    padding-left: 0;
+  }
+
+  footer .list-unstyled li a {
+    color: #dcdcdc;
+    text-decoration: none;
+  }
+
+  footer .list-unstyled li a:hover {
+    color: #f1f1f1;
+  }
   </style>
 </head>
 <body>
@@ -152,27 +181,27 @@
 </div>
 
 <!-- Footer -->
-<footer class="bg-dark text-white py-4">
+<footer class="bg-dark text-white py-4" style="background-size:cover;; background-position: center;">
   <div class="container">
-      <div class="row">
-          <div class="col-md-4">
-              <h5>UniPass</h5>
-              <p>Your gateway to university discovery and student networking</p>
-          </div>
-          <div class="col-md-4">
-              <h5>Quick Links</h5>
-              <ul class="list-unstyled">
-                  <li><a href="index.html">Home</a></li>
-                  <li><a href="about.html">About</a></li>
-                  <li><a href="#" data-bs-toggle="modal" data-bs-target="#contactModal">Contact Us</a></li>
-              </ul>
-          </div>
-          <div class="col-md-4">
-              <h5>Contact</h5>
-              <p>Email: support@unipass.com</p>
-              <p>Phone: +880 1123578653</p>
-          </div>
+    <div class="row">
+      <div class="col-md-4">
+        <h5>UniPass</h5>
+        <p>Your gateway to university discovery and student networking.</p>
       </div>
+      <div class="col-md-4">
+        <h5>Quick Links</h5>
+        <ul class="list-unstyled">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="#" data-bs-toggle="modal" data-bs-target="#contactModal">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="col-md-4">
+        <h5>Contact</h5>
+        <p>Email: support@unipass.com</p>
+        <p>Phone: +880 1123578653</p>
+      </div>
+    </div>
   </div>
 </footer>
 
